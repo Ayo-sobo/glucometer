@@ -75,5 +75,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
     refreshButton.addEventListener("click", fetchData);
     fetchData();
-    setInterval(fetchData, 30000);
+    setInterval(fetchData, 60000);
 });
