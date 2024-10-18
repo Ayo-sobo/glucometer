@@ -3,32 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Device Data</title>
-    <link rel="stylesheet" href="styles.scss">
+    <meta name="description" content="Glucometer Data Table for Dev Mode">
+    <title>Glucometer Data Dashboard</title>
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <h2>Device Data Table</h2>
+    <header>
+        <h1>Glucometer Data Dashboard</h1>
+        <p>Dev Mode</p>
+    </header>
 
-    <button id="refresh-button">Refresh Table</button>
+    <main>
+        <section id="controls">
+            <button id="refresh-button" aria-label="Refresh Table">
+                <i class="fas fa-sync-alt"></i> Refresh Table
+                <span class="loader hidden"></span>
+            </button>
+            <div id="last-updated"></div>
+        </section>
 
-    <table id="data-table">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Created At</th>
-                <th>Updated At</th>
-                <th>Hospital Number</th>
-                <th>Device ID</th>
-                <th>Signature</th>
-                <th>Reading Timestamp</th>
-                <th>Nonce</th>
-                <th>Echostr</th>
-            </tr>
-        </thead>
-        <tbody id="table-body">
-        </tbody>
-    </table>
+        <section id="data-section">
+            <table id="data-table" >
+                <thead>
+                    <tr>
+                        <th scope="col">Device ID</th>
+                        <th scope="col">Readings</th>
+                        <th scope="col">Created At</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body"></tbody>
+            </table>
+        </section>
+    </main>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
