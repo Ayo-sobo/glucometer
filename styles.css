@@ -7,6 +7,8 @@
     --text-color: #333;
     --table-even-row: #f9f9f9;
     --table-hover: #f1f1f1;
+    --highlight-color: #ffeb3b; 
+    --highlight-grey: #d3d3d3; 
 }
 
 body {
@@ -116,6 +118,30 @@ tbody td {
     padding: 15px;
     border-bottom: 1px solid #ddd;
     font-weight: bold;
+}
+
+.new-reading {
+    background-color: var(--highlight-color);
+    font-weight: bold;
+    animation: blink 5s ease-out, colorChange 5s ease-out forwards;
+}
+
+@keyframes blink {
+    0% {
+        background-color: var(--highlight-color);
+    }
+    50% {
+        background-color: transparent;
+    }
+    100% {
+        background-color: var(--highlight-color);
+    }
+}
+
+@keyframes colorChange {
+    100% {
+        background-color: var(--highlight-grey);
+    }
 }
 
 @keyframes spin {
