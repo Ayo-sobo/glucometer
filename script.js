@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
             data.message || "An error occurred while fetching data."
           );
         }
-        displayData(data.data.list);
+        displayData(data.list);
         updateLastUpdated();
       })
       .catch((error) => {
