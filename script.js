@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (data.status === "FAILED") {
                 throw new Error(data.message || "An error occurred while fetching data.");
             }
-            displayData(data.data.list);
+            displayData(data.list);
             updateLastUpdated();
         })
         .catch((error) => {
